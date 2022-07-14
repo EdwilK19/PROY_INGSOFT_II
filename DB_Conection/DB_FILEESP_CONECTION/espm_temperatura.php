@@ -10,7 +10,7 @@ if ($con) {
         echo "Registro de Temperatura";
         echo "Valor de Sensor: ".$temperatura;
         date_default_timezone_set('america/bogota');
-        $fecha = date("H:i:s d.m.Y");
+        $fecha = date("Y-m-d");
 
         $consulta = "INSERT INTO mod_temperatura(temperatura,fecha) VALUES ('$temperatura', '$fecha')";
        // $consulta = "UPDATE ESP32 SET ESpO2='$ESpO2',BMP='$BPM' WHERE Id = 1";
