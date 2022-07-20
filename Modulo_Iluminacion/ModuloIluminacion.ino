@@ -1,26 +1,43 @@
-// Pines y variables a utilizar
-int pinsensor = 0;
-int value = 0;
-char led = 13;
+int ledPin = 2; // Pin de referencia al led en la esp8266
 
+int ldrPin = 0; // LDR en el pin analogico 0
+
+
+
+int ldrValue = 0; //inicializacion de la variable que almacenara la lectura
+
+ 
 
 void setup() {
-  // Establece la velocidad de datos en bits por segundo para comunicarse con la computadora
+
   Serial.begin(9600);
+
+  pinMode(ledPin,OUTPUT);
+
 }
 
-//Lectura del nivel de iluminación
+ 
+
 void loop() {
-  value = analogRead(pinsensor);
-  Serial.println(value, DEC);
+
+  ldrValue = analogRead(ldrPin); //se hace la lectura por el pin analogico 0
+
+  Serial.println(ldrValue); //se imprime el valor en monitor
+
+  // condición para encender el led dependiendo de la intensidad de luz leída
+  
+  if (ldrValue >= 100){
+
+    digitalWrite(ledPin,HIGH);
+
+  }
+
+  else {
+
+    digitalWrite(ledPin,LOW);
+
+  }
+
   delay(500);
 
-
-  //Si la luz detectada es mayor a 0 encender el led
-  if (value > 0) {
-    digitalWrite(led, HIGH);
-  }
-  else {
-    digitalWrite(led, LOW);
-  }
 }
