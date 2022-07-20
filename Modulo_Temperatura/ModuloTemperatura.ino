@@ -110,7 +110,6 @@ void setup() {
 void loop() {
   regularTemp();
   delay(2000);
-  EnvioDatos();
 }
 
 void regularTemp() {
@@ -142,6 +141,7 @@ void regularTemp() {
 
 float medirTemp() {
   float temp = dht.getTemperature();
+  EnvioDatos();
   return temp;
 }
 
