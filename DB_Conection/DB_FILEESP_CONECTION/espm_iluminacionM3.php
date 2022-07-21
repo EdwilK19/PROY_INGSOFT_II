@@ -12,7 +12,7 @@ if ($con) {
         date_default_timezone_set('america/bogota');
         $fecha = date("Y-m-d");
 
-        $consulta = "INSERT INTO mod_iluminacionm3(iluminacion,fecha) VALUES ('$iluminacion', '$fecha')";
+        $consulta = "INSERT INTO mod_iluminacionm3(iluminacion,fecha) VALUES ('$iluminacion3', '$fecha')";
        // $consulta = "UPDATE ESP32 SET ESpO2='$ESpO2',BMP='$BPM' WHERE Id = 1";
         $resultado = mysqli_query($con, $consulta);
         if ($resultado){
