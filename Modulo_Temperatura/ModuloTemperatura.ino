@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <WiFi.h>
+#include <HTTPClient.h>
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 #include "DHTesp.h"
@@ -17,6 +18,7 @@ float maxTempAlta = 26;
 float maxTempBaja = 25.5;
 
 AsyncWebServer server(80);
+WiFiClient client;
 
 const char* ssid = "ESP32";
 const char* password = "12345678";
