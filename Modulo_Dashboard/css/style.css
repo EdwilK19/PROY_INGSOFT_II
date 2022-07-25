@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  color: #2c2c51;
+  margin: 40px 0;
+}
+
+.icon {
+  width: 100px;
+  height: auto;
+}
+
+.card {
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  min-height: auto;
+}
+.card h3 {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+.card .card-content {
+  display: flex;
+  justify-content: center;
+}
+.text-content {
+  display:flex;
+  justify-content: center;
+  height: 35px;
+}
+.card .gaugeMeter {
+  height: 280px;
+  position: relative;
+  
+}
+.card u {
+  text-decoration: none;
+}
+.card span {
+  display: none;
+}
+.card p {
+  width: 100%;
+  height: -webkit-min-content !important;
+  height: min-content !important;
+  position: absolute;
+  font-size: 1.5rem !important;
+  line-height: 0 !important;
+  bottom: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+#wrapper {
+  position:relative;
+  width: 600px; 
+  height: 400px
+}
+#wrapper > img {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.temperatura{
+  background-image: url("https://i.ibb.co/zVTHDG3/temperatura.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100px; 
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.humedad{
+  background-image: url("https://i.ibb.co/4PsFLW8/Humidity-icon-icons-com-52507.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100px; 
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  position: absolute;
+}
+  .iluminacion{
+    background-image: url("https://i.ibb.co/vYmvBs3/bulb-icon-icons-com-74600.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+    width: 100px; 
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    position: absolute;
+}
