@@ -1,10 +1,11 @@
+
 #include <ESP8266HTTPClient.h>
 #include <ESP8266WiFiMulti.h>
 #include <WiFiClient.h>
 
 // Se definen las credenciales de red
-const char* ssid ="ESP32";
-const char* password ="12345678";
+const char* ssid ="GONZALEZ_AP_HOME";
+const char* password ="emilio181063";
 WiFiClient client;
 
 int ledPin = 2; // Pin de referencia al led en la esp8266
@@ -56,7 +57,7 @@ void loop() {
 
   }
 
-  delay(500);
+  delay(750);
   EnvioDatos();
 
 }
