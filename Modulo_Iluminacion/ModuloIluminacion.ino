@@ -65,8 +65,9 @@ void loop() {
 void EnvioDatos(){
   if (WiFi.status() == WL_CONNECTED){
      HTTPClient http;  //se crea el objeto http
-     String datos_a_enviar = "iluminacionm3=" + String(ldrValue);
-
+     int datoRedondeado = map(ldrValue, 0, 1050, 0, 100);
+     String datos_a_enviar = "iluminacionm3=" + String(datoRedondeado);
+    
      http.begin(client,"http://ggsxcloud.website/espm_iluminacionM3.php");
      http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // defino texto plano..
 
