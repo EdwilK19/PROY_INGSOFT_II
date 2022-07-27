@@ -201,7 +201,7 @@ void EnvioDatos(){
      HTTPClient http;  // creo el objeto http
      String datos_a_enviar = "temperatura=" + String (tempActual);
 
-     http.begin(client,"http://ggsxcloud.website/espm_temperatura.php");
+     http.begin(client,"");
      http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // defino texto plano..
 
      int codigo_respuesta = http.POST(datos_a_enviar);

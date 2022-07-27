@@ -1,9 +1,9 @@
 <?php
 
-        $user = "u4499_XdgTM1wEDo";
-        $pass = "HWS7SKHG1+Ck0dZutv6ygo6.";
+        $user = "";
+        $pass = "";
         $server = "";
-        $db ="s4499_DBPROYINGII";
+        $db ="";
         $con = mysqli_connect($server, $user, $pass, $db);
 
 ?>

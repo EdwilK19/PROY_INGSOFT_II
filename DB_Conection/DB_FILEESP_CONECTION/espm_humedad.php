@@ -1,6 +1,6 @@
 <?php
 
-include'conexion.php';
+include'';
 
 if ($con) {
     echo "Conexion con base de datos exitosa! ";

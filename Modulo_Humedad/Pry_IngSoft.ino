@@ -6,8 +6,8 @@
 
 
 // Se definen las credenciales de red
-const char* ssid ="ESP32";
-const char* password ="12345678";
+const char* ssid ="";
+const char* password ="";
 
 //Asignacion de pines y variables a utilizar
 int sensor_pin = A0;
@@ -60,11 +60,11 @@ void loop(){
 
 //Rutina de envio de datos por POST
 void EnvioDatos(){
-  if (WiFi.status() == WL_CONNECTED){ 
+  if (WiFi.status() == WL_CONNECTED){
      HTTPClient http;  //se crea el objeto http
-     String datos_a_enviar = "humedad=" + String(humedad);  
+     String datos_a_enviar = "humedad=" + String(humedad);
 
-     http.begin(client,"http://ggsxcloud.website/espm_humedad.php");
+     http.begin(client,"");
      http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // defino texto plano..
 
      int codigo_respuesta = http.POST(datos_a_enviar);

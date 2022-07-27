@@ -4,8 +4,8 @@
 #include <WiFiClient.h>
 
 // Se definen las credenciales de red
-const char* ssid ="GONZALEZ_AP_HOME";
-const char* password ="emilio181063";
+const char* ssid ="";
+const char* password ="";
 WiFiClient client;
 
 int ledPin = 2; // Pin de referencia al led en la esp8266
@@ -67,8 +67,8 @@ void EnvioDatos(){
      HTTPClient http;  //se crea el objeto http
      int datoRedondeado = map(ldrValue, 0, 1050, 0, 100);
      String datos_a_enviar = "iluminacionm3=" + String(datoRedondeado);
-    
-     http.begin(client,"http://ggsxcloud.website/espm_iluminacionM3.php");
+
+     http.begin(client,"");
      http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // defino texto plano..
 
      int codigo_respuesta = http.POST(datos_a_enviar);
