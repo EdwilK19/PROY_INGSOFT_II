@@ -57,3 +57,33 @@ int segundo = now.second();
    digitalWrite(13,false);
    }
 }
+
+void EnvioDatos(){
+  if (WiFi.status() == WL_CONNECTED){
+     HTTPClient http;  // creo el objeto http
+     String datos_a_enviar = "temperatura=" + String (tempActual);
+
+     http.begin(client,"http://ggsxcloud.website/espm_temperatura.php");
+     http.addHeader("Content-Type", "application/x-www-form-urlencoded"); // defino texto plano..
+
+     int codigo_respuesta = http.POST(datos_a_enviar);
+
+     if (codigo_respuesta>0){
+      Serial.println("Código HTTP: "+ String(codigo_respuesta));
+        if (codigo_respuesta == 200){
+          String cuerpo_respuesta = http.getString();
+          Serial.println("El servidor respondió: ");
+          Serial.println(cuerpo_respuesta);
+        }
+     } else {
+        Serial.print("Error enviado POST, código: ");
+        Serial.println(codigo_respuesta);
+     }
+
+       http.end();  // libero recursos
+
+  } else {
+     Serial.println("Error en la conexion WIFI");
+  }
+  delay(1000); //espera
+}
